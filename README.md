@@ -51,8 +51,9 @@ Connect the 3v to VSYS, don't connect the 5v, connect the ground to a ground, co
 
 After uploading the .uf2, you should see the lag tester appear in Zadig with WinUSB selected (VID/PID A57E/0002).
 
-Gecko codes: you need these gecko codes. Check Apply delay to all in-game scenes or not - if you don't, just keep in mind you need to add 33.34ms to your result 
-to get your netplay latency. (plus something for the screen remanence time)
+Gecko codes: you need these gecko codes. Import them manually from the normal Melee iso if not present. Check Apply delay to all in-game scenes or not - if you don't, just keep in mind you need to add 33.34ms to your result to get your netplay latency. (plus something for the screen remanence time)
+
+If you want the lowest possible latency, turn off Reduce Timing Dispersion.
 
 ![image](img/geckoCodesWithoutDelayInGameScenes.png)
 
@@ -70,5 +71,3 @@ Then run the full script. It should create:
   
 Example result:
 ![image](img/exemple.png)
-
-  
