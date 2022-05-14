@@ -62,6 +62,6 @@ There's no limit on how long you can let it run (I let it run overnight, yields 
 Once you have the measure, use the python script and replace "filename" by the name of the file (and replace the path if it's the first time you launch it).
 Then run the full script. It should create:
   - A graph showing the evolution of lag through time (X axis is # measures, Y axis is lag in ms)
-  - A text output with the name of the file, number of measures and the average latency (until 3800, so not properly accounting for remanence time)
+  - A text output with the name of the file, number of measures and the average latency (until 3800, so not properly accounting for remanence time / or send me the file)
   
   
