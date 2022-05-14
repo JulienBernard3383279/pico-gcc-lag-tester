@@ -4,7 +4,7 @@ This project is a Melee setup lag test measurement device that's oriented at adv
 
 It involves connecting a Male GC port and a phototransistor circuit to a Raspberry Pi Pico. The Pico will pass as a Gamecube controller over that GC port,
 and once a measure is started over USB, the Pico will input something that will make the screen change from black to white in Melee. It will then measure the
-light intensity read by the phototransistor every 0.2ms for the next 200ms, and will report each individual measure over USB. (an overnight measure yields
+light intensity read by the phototransistor every 0.2ms for the next 100ms, and will report each individual measure over USB. (an overnight measure yields
 several hundreds of KBs of data)
 
 That raw data is then to be processed by a Python script. The raw data allows for more in depth research such as statistical distribution, remanence time or 
