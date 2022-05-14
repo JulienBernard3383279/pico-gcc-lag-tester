@@ -38,12 +38,12 @@ configuration to have meaningful comparisons between your measures)
 - A male GC port connected electrically to the Pico.
 
 This is the phototransistor part of the circuit:
-//TODO
+![image](img/photodiodeConnection.png)
 
 The photodiode should be soldered using super long wires (>1m, I advise AWG30). Then, make it so the photodiode is stable at ~half the height of your screen, pointing
 towards the screen.
 
-//TODO Picture
+![image](img/IMG_20220514_234122.jpg)
 
 As for the GC male port, it goes on GPIO22.
 
@@ -51,7 +51,11 @@ Connect the 3v to VSYS, don't connect the 5v, connect the ground to a ground, co
 
 After uploading the .uf2, you should see the lag tester appear in Zadig with WinUSB selected (VID/PID A57E/0002).
 
-Gecko codes //TODO
+Gecko codes: you need these gecko codes. Check Apply delay to all in-game scenes or not - if you don't, just keep in mind you need to add 33.34ms to your result 
+to get your netplay latency. (plus something for the screen remanence time)
+
+![image](img/geckoCodesWithoutDelayInGameScenes.png)
+
 
 Open the 20XX Training Pack, select DF or BF, launch a game, pause, unzoom, activate develop codes, switch the background to white using X+DpadDown.
 
@@ -62,6 +66,9 @@ There's no limit on how long you can let it run (I let it run overnight, yields 
 Once you have the measure, use the python script and replace "filename" by the name of the file (and replace the path if it's the first time you launch it).
 Then run the full script. It should create:
   - A graph showing the evolution of lag through time (X axis is # measures, Y axis is lag in ms)
-  - A text output with the name of the file, number of measures and the average latency (until 3800, so not properly accounting for remanence time / or send me the file)
+  - A text output with the name of the file, number of measures and the average latency (until 3800, so not properly accounting for remanence time). Or, send me the file and I'll launch the script if python is a bitch
   
+Example result:
+![image](img/exemple.png)
+
   
